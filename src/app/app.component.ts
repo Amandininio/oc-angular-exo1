@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Posts } from './modele/posts';
+import { Posts } from './modele/posts'; // Bonus; Créer un type pour les posts
 
 @Component({
   selector: 'app-root',
@@ -8,13 +8,13 @@ import { Posts } from './modele/posts';
 })
 
 export class AppComponent {
-  posts: Array <Posts> // <Posts>
+  posts: Array <Posts>
   = [
     {
     title: 'Mon premier post',
     content: 'Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression.',
     loveIts: 1 ,
-    created_at: new Date(),
+    created_at: new Date (),
     },
     {
     title: 'Mon 2nd post',
