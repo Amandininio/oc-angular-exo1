@@ -1,0 +1,9 @@
+
+<div [ngStyle]="{backgroundColor: getColor(), color: getColorText()}" class="list-group-item">
+    <li class="row"> <span class="col-md-10"> {{ postTitle | uppercase }} </span><span class="col-md-2"> Date : {{ postDateStamp | date:'d-MMM-yy'}}</span></li>
+    <li > {{ postContent }}</li>
+    <!--<li class="list-group-item"> Love it: {{ postLove }}</li>-->
+
+    <button class="btn btn-success" (click)="onLove()">Love it !!</button><span>{{' '+postLove+' '}}</span>
+    <button class="btn btn-danger" (click)="onHate()">Hate it !!</button>
+</div>

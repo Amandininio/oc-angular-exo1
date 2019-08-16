@@ -1,11 +1,11 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-posts',
-  templateUrl: './posts.component.html',
-  styleUrls: ['./posts.component.scss']
+  selector: 'app-post-list-items',
+  templateUrl: './post-list-items.component.html',
+  styleUrls: ['./post-list-items.component.scss']
 })
-export class PostsComponent implements OnInit {
+export class PostListItemsComponent implements OnInit {
   @Input() postTitle: string;
   @Input() postContent: string;
   @Input() postLove: number;
@@ -35,24 +35,21 @@ export class PostsComponent implements OnInit {
   getColor() {
     if (this.postLove < 0) {
       return 'tomato';
-    }
-    else if (this.postLove > 0) {
+    } else if (this.postLove > 0) {
       return 'lightgreen';
-    }
-    else {
+    } else {
       return 'white';
     }
   }
   getColorText() {
     if (this.postLove < 0) {
       return 'red';
-    }
-    else if (this.postLove > 0) {
+    } else if (this.postLove > 0) {
       return 'green';
-    }
-    else {
+    } else {
       return 'black';
     }
   }
 
 }
+
